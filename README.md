@@ -184,3 +184,7 @@ nsxsm.gns.acme-fitness-gns.users-mongo                        ["users-mongo.demo
 ## Conclusion
 
 At this point an Acme Fitness instance has been deployed with services easily connected across two Kubernetes clusters. What's more they are fully connected using mTLS! And no one has to know how the connectivity works, instead just discover services.
+
+## Todo
+
+* Show TMC integration - install TSM via TMC
