@@ -128,12 +128,22 @@ Access that URL in the browser. Something like the below should be visble.
 
 At this point, it may take a few minutes to show up, there should be a graph that looks like the below in TSM.
 
+Ultimately what this demo has done is tell the shopping service that the catalog service is located at catalog.demo.acme.com, and the underlying networking plubmiing is implemtned by Tanzu Service Mesh, which can be seen in the `acme-fitness-cluster-1.yaml` manifest. 
+
+```
+$ grep -A 1 CATALOG_HOST acme-fitness-cluster-1.yaml 
+        - name: CATALOG_HOST
+          value: 'catalog.demo.acme.com'
+```
+
+And that is what is shown on the graph.
+
 ![img](img/graph.jpg)
 
 
 ### Review Objects Created
 
-We would expect to see the following 
+We would expect to see the following objects.
 
 ```
 $ k get serviceentries
